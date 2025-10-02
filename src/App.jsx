@@ -1,116 +1,14 @@
-// import { motion } from "framer-motion";
-// import { Sun, Droplet, Leaf, Recycle, Wind, Bolt } from "lucide-react";
-// import { useState } from "react";
-// import mallImg from "./assets/mall.jpg"; // placeholder
-
-// export default function App() {
-//   const [selectedFeature, setSelectedFeature] = useState(null);
-
-//   const features = [
-//     { id: 1, title: "Solar Power", icon: <Sun className="w-10 h-10 text-yellow-500" />, desc: "100% energy from solar panels on the rooftop.", img: mallImg },
-//     { id: 2, title: "Rainwater Harvesting", icon: <Droplet className="w-10 h-10 text-blue-500" />, desc: "Collect and reuse rainwater.", img: mallImg },
-//     { id: 3, title: "Green Roofs", icon: <Leaf className="w-10 h-10 text-green-500" />, desc: "Eco-friendly roofs to reduce heat.", img: mallImg },
-//     { id: 4, title: "Recycling Hub", icon: <Recycle className="w-10 h-10 text-gray-600" />, desc: "Waste segregation & composting.", img: mallImg },
-//     { id: 5, title: "Wind Turbines", icon: <Wind className="w-10 h-10 text-cyan-500" />, desc: "Small-scale turbines provide renewable energy.", img: mallImg },
-//     { id: 6, title: "Energy Efficiency", icon: <Bolt className="w-10 h-10 text-yellow-600" />, desc: "LED lighting and smart HVAC reduce energy consumption.", img: mallImg }
-//   ];
-
-//   return (
-//     <div className="min-h-screen font-sans text-gray-800">
-
-//       {/* Navbar */}
-//       <nav className="flex justify-between items-center p-6 bg-white shadow-md sticky top-0 z-10">
-//         <h1 className="text-2xl font-bold text-green-700 cursor-pointer">LivMal 🌿</h1>
-//         <ul className="flex gap-6 font-medium">
-//           <li><a href="#features" className="hover:text-green-700">Explore Features</a></li>
-//         </ul>
-//       </nav>
-
-//       {/* Hero Section */}
-//       <header className="relative h-screen w-full">
-//         <img src={mallImg} alt="LivMal Mall" className="w-full h-full object-cover" />
-//         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-6">
-//           <motion.h1
-//             initial={{ opacity: 0, y: 20 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 1 }}
-//             className="text-5xl md:text-6xl font-bold text-white"
-//           >
-//             Welcome to LivMal 🌿
-//           </motion.h1>
-//           <motion.p
-//             initial={{ opacity: 0 }}
-//             animate={{ opacity: 1 }}
-//             transition={{ delay: 0.5, duration: 1 }}
-//             className="mt-6 text-lg md:text-xl text-white max-w-2xl"
-//           >
-//             Designing the world’s first truly sustainable shopping mall.  
-//             Connect, shop, and live in harmony with the environment.
-//           </motion.p>
-//           <a href="#features" className="mt-8 inline-block px-6 py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition">
-//             Explore Features
-//           </a>
-//         </div>
-//       </header>
-
-//       {/* Features Section */}
-//       <section id="features" className="py-16 px-10 bg-green-50">
-//         <h2 className="text-3xl font-bold text-center text-green-800 mb-6">Click on a Feature to Explore</h2>
-//         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-//           {features.map(f => (
-//             <FeatureCard key={f.id} feature={f} onClick={() => setSelectedFeature(f)} />
-//           ))}
-//         </div>
-//         {selectedFeature && <FeatureModal feature={selectedFeature} onClose={() => setSelectedFeature(null)} />}
-//       </section>
-
-//       {/* Footer */}
-//       <footer className="text-center py-6 bg-green-700 text-white mt-16">
-//         <p>© 2025 LivMal | Designing a Sustainable Future 🌍</p>
-//       </footer>
-//     </div>
-//   );
-// }
-
-// // Feature Card
-// function FeatureCard({ feature, onClick }) {
-//   return (
-//     <motion.div
-//       whileHover={{ scale: 1.05 }}
-//       whileTap={{ scale: 0.95 }}
-//       className="bg-white rounded-2xl shadow-lg p-6 text-center cursor-pointer hover:shadow-xl transition"
-//       onClick={onClick}
-//     >
-//       <div className="flex justify-center mb-4">{feature.icon}</div>
-//       <h3 className="text-xl font-semibold text-green-700">{feature.title}</h3>
-//     </motion.div>
-//   );
-// }
-
-// // Feature Modal
-// function FeatureModal({ feature, onClose }) {
-//   return (
-//     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20">
-//       <motion.div
-//         initial={{ scale: 0.8, opacity: 0 }}
-//         animate={{ scale: 1, opacity: 1 }}
-//         exit={{ scale: 0.8, opacity: 0 }}
-//         className="bg-white rounded-2xl p-8 max-w-xl w-full relative shadow-lg"
-//       >
-//         <button className="absolute top-3 right-3 text-gray-500 hover:text-gray-800" onClick={onClose}>✖</button>
-//         <img src={feature.img} alt={feature.title} className="w-full rounded-lg mb-4" />
-//         <h3 className="text-2xl font-bold text-green-800">{feature.title}</h3>
-//         <p className="mt-4 text-gray-700">{feature.desc}</p>
-//       </motion.div>
-//     </div>
-//   );
-// }
-
 import { motion } from "framer-motion";
 import { useState } from "react";
-
-// Icons (just placeholders for now)
 import { Sun, Wind, Droplet, Leaf, Bolt } from "lucide-react";
+
+// Import assets
+import logo from "./assets/logo.jpg";
+import background from "./assets/background.jpg";
+import grassImg from "./assets/grass.jpg";
+import mushroomImg from "./assets/mushroom.jpg";
+import tranviewImg from "./assets/tranview.jpg";
+import sideviewImg from "./assets/sideview.jpg";
 
 export default function App() {
   const categories = ["All", "Energy Generation", "Sustainable Lifestyle & Community"];
@@ -122,65 +20,37 @@ export default function App() {
       id: 1,
       title: "Grass Turbines",
       category: "Energy Generation",
-      desc: "Each blade of grass in the garden acts as a bladeless wind turbine generating energy.",
-      img: "https://via.placeholder.com/400x250?text=Grass+Turbines",
+      desc: "Each blade of grass in the garden acts as a bladeless wind turbine, contributing to the mall's clean energy supply.",
+      imgTopView: grassImg,
+      imgSideView: grassImg,
       icon: <Wind className="w-10 h-10 text-green-500" />
     },
     {
       id: 2,
       title: "Archimedes Mycelium Turbine",
       category: "Energy Generation",
-      desc: "A wind turbine made from mycelium bricks, blending sustainability and innovation.",
-      img: "https://via.placeholder.com/400x250?text=Mycelium+Turbine",
+      desc: "A wind turbine made from mycelium bricks, combining innovation and sustainability.",
+      imgTopView: mushroomImg,
+      imgSideView: mushroomImg,
       icon: <Leaf className="w-10 h-10 text-green-600" />
     },
     {
       id: 3,
-      title: "Microbacteria Cilia",
-      category: "Energy Generation",
-      desc: "Microbacteria cilia on the outer walls harvest energy from ambient movement.",
-      img: "https://via.placeholder.com/400x250?text=Microbacteria+Cilia",
-      icon: <Bolt className="w-10 h-10 text-yellow-500" />
+      title: "Public Transport View",
+      category: "Sustainable Lifestyle & Community",
+      desc: "Experience our car-free public transport system within the mall, making shopping eco-friendly.",
+      imgTopView: tranviewImg,
+      imgSideView: tranviewImg,
+      icon: <Droplet className="w-10 h-10 text-blue-500" />
     },
     {
       id: 4,
-      title: "Hydraulic Telescopic Roof",
-      category: "Energy Generation",
-      desc: "Supports the flexible roof and contains a wind turbine on top.",
-      img: "https://via.placeholder.com/400x250?text=Hydraulic+Roof",
+      title: "Side View of Mall",
+      category: "All",
+      desc: "A side view of LivMal showcasing its adaptive, sustainable architecture.",
+      imgTopView: sideviewImg,
+      imgSideView: sideviewImg,
       icon: <Sun className="w-10 h-10 text-yellow-400" />
-    },
-    {
-      id: 5,
-      title: "Flexible Roof",
-      category: "Energy Generation",
-      desc: "Changes topology based on wind patterns to optimize air flow to turbines.",
-      img: "https://via.placeholder.com/400x250?text=Flexible+Roof",
-      icon: <Wind className="w-10 h-10 text-cyan-500" />
-    },
-    {
-      id: 6,
-      title: "Sharing Economy Shops",
-      category: "Sustainable Lifestyle & Community",
-      desc: "Stores dedicated to promoting sharing economy principles.",
-      img: "https://via.placeholder.com/400x250?text=Sharing+Shops",
-      icon: <Leaf className="w-10 h-10 text-green-700" />
-    },
-    {
-      id: 7,
-      title: "Energy-Generating Recreation",
-      category: "Sustainable Lifestyle & Community",
-      desc: "Cycling and treadmill desks help generate energy while staying active.",
-      img: "https://via.placeholder.com/400x250?text=Recreation+Energy",
-      icon: <Bolt className="w-10 h-10 text-yellow-600" />
-    },
-    {
-      id: 8,
-      title: "Car-Free Public Transport",
-      category: "Sustainable Lifestyle & Community",
-      desc: "Public transport inside the mall eliminates the need for cars.",
-      img: "https://via.placeholder.com/400x250?text=Public+Transport",
-      icon: <Droplet className="w-10 h-10 text-blue-500" />
     }
   ];
 
@@ -190,61 +60,69 @@ export default function App() {
       : features.filter((f) => f.category === selectedCategory);
 
   return (
-    <div className="bg-gradient-to-b from-green-50 to-green-100 min-h-screen font-sans text-gray-800">
+    <div
+      className="min-h-screen font-sans text-gray-800"
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}
+    >
       {/* Navbar */}
-      <nav className="flex justify-between items-center p-6 bg-white shadow-md sticky top-0 z-10">
-        <h1 className="text-2xl font-bold text-green-700 cursor-pointer">LivMal 🌿</h1>
+      <nav className="flex justify-between items-center p-6 bg-white bg-opacity-80 shadow-md sticky top-0 z-10 backdrop-blur">
+        <div className="flex items-center gap-2">
+          <img src={logo} alt="LivMal Logo" className="w-12 h-12 rounded-full" />
+          <h1 className="text-2xl font-bold text-green-700 cursor-pointer">LivMal 🌿</h1>
+        </div>
         <ul className="flex gap-6 font-medium">
-          <li>
-            <a href="#motivation" className="hover:text-green-700">
-              Motivation
-            </a>
-          </li>
-          <li>
-            <a href="#features" className="hover:text-green-700">
-              Features
-            </a>
-          </li>
+          <li><a href="#motivation" className="hover:text-green-700">Motivation</a></li>
+          <li><a href="#features" className="hover:text-green-700">Features</a></li>
         </ul>
       </nav>
 
       {/* Hero Section */}
-      <header className="relative text-center py-20 px-6">
-        <img
-          src="https://via.placeholder.com/1200x600?text=LivMal+Sustainable+Mall"
-          alt="LivMal Mall"
-          className="w-full h-96 object-cover rounded-lg shadow-lg"
-        />
+      <header className="relative text-center py-20 px-6 flex flex-col gap-6">
+        {/* Logo on Hero */}
+        <div className="mx-auto w-32 h-32">
+          <img
+            src={logo}
+            alt="LivMal Logo"
+            className="w-full h-full object-cover rounded-full shadow-lg"
+          />
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-40 rounded-lg"
+          className="max-w-4xl mx-auto bg-white bg-opacity-70 p-8 rounded-xl shadow-lg"
         >
-          <h2 className="text-5xl font-bold text-green-100">Welcome to LivMal</h2>
-          <p className="mt-4 max-w-2xl text-center text-lg">
-            Designing the world’s first truly sustainable shopping mall.  
-            Connect, shop, and live in harmony with the environment. 🌎
+          <h2 className="text-5xl font-bold text-green-800">Welcome to LivMal</h2>
+          <p className="mt-4 text-lg text-gray-700">
+            LivMal, the “Live Mall”, is a shopping destination that **breathes and adapts like a living organism**. 
+            The mall responds to the environment, shifting and evolving with the climate to create a space 
+            that feels alive, dynamic, and in harmony with nature.
           </p>
         </motion.div>
+
+        <div className="mt-10 grid md:grid-cols-2 gap-6">
+          <MallView title="Top View" img={sideviewImg} />
+          <MallView title="Side View" img={sideviewImg} />
+        </div>
       </header>
 
       {/* Motivation Section */}
-      <section id="motivation" className="py-16 px-10 bg-white">
+      <section id="motivation" className="py-16 px-10 bg-white bg-opacity-80">
         <h3 className="text-3xl font-bold text-center text-green-800">Motivation</h3>
-        <p className="mt-6 max-w-3xl mx-auto text-center text-gray-600">
-          LivMal, short for “Live Mall”, is not just a shopping destination it is a living, adaptive ecosystem.
-
-The mall adapts dynamically to its environment, responding to changing climate conditions to optimize energy generation and comfort. Its flexible roof topology shifts with wind patterns, ensuring that integrated turbines receive maximum airflow.
-
-Every design element, from bladeless grass turbines in the gardens to energy-harvesting microbacteria on the walls, contributes to a sustainable, interactive, and immersive shopping experience.
-
-At LivMal, shopping, recreation, and community engagement happen in harmony with nature, demonstrating how architecture and technology can coexist with the environment.
+        <p className="mt-6 max-w-3xl mx-auto text-center text-gray-700">
+          LivMal is designed to be immersive, inspiring, and regenerative – a shopping experience
+          where people feel connected to both community and environment. It’s a living ecosystem
+          where architecture, nature, and human activity coexist beautifully.
         </p>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-16 px-10 bg-green-50">
+      <section id="features" className="py-16 px-10 bg-green-50 bg-opacity-90">
         <h3 className="text-3xl font-bold text-center text-green-800">Explore Features</h3>
 
         {/* Category Tabs */}
@@ -285,11 +163,32 @@ At LivMal, shopping, recreation, and community engagement happen in harmony with
   );
 }
 
+// Mall View Component
+function MallView({ title, img }) {
+  return (
+    <div className="relative w-full max-w-6xl mx-auto">
+      <img
+        src={img}
+        alt={title}
+        className="w-full h-64 object-cover rounded-lg shadow-lg"
+      />
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="absolute inset-0 flex items-center justify-center text-white bg-black bg-opacity-30 rounded-lg"
+      >
+        <h2 className="text-3xl font-bold">{title}</h2>
+      </motion.div>
+    </div>
+  );
+}
+
 // Feature Card Component
 function FeatureCard({ feature, onClick }) {
   return (
     <div
-      className="feature-card bg-white rounded-2xl shadow-lg p-6 text-center cursor-pointer hover:shadow-xl transition"
+      className="bg-white rounded-2xl shadow-lg p-6 text-center cursor-pointer hover:shadow-xl transition"
       onClick={onClick}
     >
       <div className="flex justify-center mb-4">{feature.icon}</div>
@@ -301,8 +200,8 @@ function FeatureCard({ feature, onClick }) {
 // Feature Modal Component
 function FeatureModal({ feature, onClose }) {
   return (
-    <div className="feature-modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20">
-      <div className="modal-content bg-white rounded-2xl p-8 max-w-xl w-full relative shadow-lg">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20">
+      <div className="bg-white rounded-2xl p-8 max-w-xl w-full relative shadow-lg">
         <button
           className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 font-bold"
           onClick={onClose}
@@ -311,12 +210,19 @@ function FeatureModal({ feature, onClose }) {
         </button>
         <div className="text-center">
           <img
-            src={feature.img}
-            alt={feature.title}
+            src={feature.imgTopView || feature.img}
+            alt={`${feature.title} Top View`}
             className="w-full h-64 object-cover rounded-lg mb-4"
           />
           <h3 className="text-2xl font-bold text-green-800">{feature.title}</h3>
           <p className="mt-4 text-gray-700">{feature.desc}</p>
+          {feature.imgSideView && (
+            <img
+              src={feature.imgSideView}
+              alt={`${feature.title} Side View`}
+              className="w-full h-64 object-cover rounded-lg mt-4"
+            />
+          )}
         </div>
       </div>
     </div>
