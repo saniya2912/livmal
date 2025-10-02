@@ -7,7 +7,7 @@ import logo from "./assets/logo.jpg";
 import background from "./assets/background.jpg";
 import grassImg from "./assets/grass.jpg";
 import mushroomImg from "./assets/mushroom.jpg";
-import tranviewImg from "./assets/tranview.jpg";
+import tranviewImg from "./assets/trainview.jpg";
 import sideviewImg from "./assets/sideview.jpg";
 
 export default function App() {
