@@ -238,7 +238,7 @@ import logo from "./assets/logo.jpg";
 import background from "./assets/background.jpg";
 import topviewImg from "./assets/topview.jpg";
 import sideviewImg from "./assets/sideview.jpg";
-import tranviewImg from "./assets/tranview.jpg";
+import tranviewImg from "./assets/trainview.jpg";
 import inside1Img from "./assets/inside1.jpg";
 import inside2Img from "./assets/inside2.jpg";
 import grassImg from "./assets/grass.jpg";
