@@ -233,9 +233,13 @@ export default function App() {
       <section id="motivation" className="py-16 px-10 bg-white">
         <h3 className="text-3xl font-bold text-center text-green-800">Motivation</h3>
         <p className="mt-6 max-w-3xl mx-auto text-center text-gray-600">
-          The world needs greener spaces. LivMal demonstrates how architecture,  
-          renewable energy, and sustainable design principles can combine to create  
-          a shopping experience that is eco-friendly, energy-efficient, and community-driven.
+          LivMal, short for “Live Mall”, is not just a shopping destination it is a living, adaptive ecosystem.
+
+The mall adapts dynamically to its environment, responding to changing climate conditions to optimize energy generation and comfort. Its flexible roof topology shifts with wind patterns, ensuring that integrated turbines receive maximum airflow.
+
+Every design element, from bladeless grass turbines in the gardens to energy-harvesting microbacteria on the walls, contributes to a sustainable, interactive, and immersive shopping experience.
+
+At LivMal, shopping, recreation, and community engagement happen in harmony with nature, demonstrating how architecture and technology can coexist with the environment.
         </p>
       </section>
 
